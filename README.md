@@ -5,9 +5,13 @@ This project will focus on detecting a custom AR Tag (a form of fiducial marker)
 
 There are two aspects to using an AR Tag - detection and tracking. Both of them are implemented in this project. The detection stage involves finding the AR Tag from a given image sequence, while the tracking stage involves keeping the tag in “view” throughout the sequence and performing image processing operations based on the tag’s orientation and position (a.k.a. the pose). The end goal is to implement these techniques on videos.
 
-Detection: Using a custom AR Tag image (ref_marker.png) to be used as reference. This tag encodes both the orientation as well as the ID of the tag.
+Detection:
+
+Using a custom AR Tag image (ref_marker.png) to be used as reference. This tag encodes both the orientation as well as the ID of the tag.
+
 
 Encoding Scheme:
+
 In order to properly use the tag, it is necessary to understand how the data is encoded in the tag. Consider the refrence marker:
 
 • The tag can be decomposed into an 8 × 8 grid of squares, which includes a padding of 2 squares width along the borders. This allows easy detection of the tag when placed on white background.
@@ -18,7 +22,9 @@ In order to properly use the tag, it is necessary to understand how the data is 
 
 In this project, cv2.goodFeaturedetection based on Shi-Tomasi method is used as the corner detector algorithm 
 
+
 Tracking
+
 Once you have the four corners of the tag, we can perform homography estimation on this in order to perform some image processing operations, such as superimposing an image over the tag. The image Lena.png file is used as the template image.
 
 • The first step is to compute the homography between the corners of the template and the four corners of the tag.
@@ -27,6 +33,7 @@ Once you have the four corners of the tag, we can perform homography estimation 
 
 
 Placing a virtual cube on the tag
+
 Augmented reality applications generally place 3D objects onto the real world, which maintain three dimensional properties such as rotation and scaling as you move around the “object” with your camera. In this part of the project, you will attempt to implement a simple version of the same, by placing a 3D cube on the tag. This is the process of “projecting” a 3D shape onto a 2D image. The “cube” is a simple structure made up of 8 points and lines joining them. It is also an easy shape to implement as practice.
 
 • First, compute the homography between the world coordinates (the reference AR tag) and the image plane (the tag in the image sequence).

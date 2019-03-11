@@ -4,6 +4,7 @@ Using Python and OpenCV to implement some statndard AR related techniques
 This project will focus on detecting a custom AR Tag (a form of fiducial marker), that is used for obtaining a point of reference in the real world, such as in augmented reality applications.
 
 There are two aspects to using an AR Tag - detection and tracking. Both of them are implemented in this project. The detection stage involves finding the AR Tag from a given image sequence, while the tracking stage involves keeping the tag in “view” throughout the sequence and performing image processing operations based on the tag’s orientation and position (a.k.a. the pose). The end goal is to implement these techniques on videos.
+(Downoad videos by from here: https://drive.google.com/open?id=1N76mFyNPs_l2desR7A_y_5v86HmH1ENU)
 
 Detection:
 

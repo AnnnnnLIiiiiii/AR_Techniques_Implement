@@ -1,4 +1,5 @@
 # AR_Techniques_Implement
+### Coworker: Lih-Narn Wang, Yu-Kei Wang
 Using Python and OpenCV to implement some statndard AR related techniques
 
 This project will focus on detecting a custom AR Tag (a form of fiducial marker), that is used for obtaining a point of reference in the real world, such as in augmented reality applications.

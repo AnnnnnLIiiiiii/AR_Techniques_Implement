@@ -1,5 +1,4 @@
 # AR_Techniques_Implement
-### Coworker: Lih-Narn Wang, Yu-Kei Wang
 Using Python and OpenCV to implement some statndard AR related techniques
 
 This project will focus on detecting a custom AR Tag (a form of fiducial marker), that is used for obtaining a point of reference in the real world, such as in augmented reality applications.
@@ -45,3 +44,5 @@ Augmented reality applications generally place 3D objects onto the real world, w
 • Assuming that the virtual cube is sitting on “top” of the marker, and that the Z axis is negative in the upwards direction, we will be able to obtain the coordinates of the other four corners of the cube.
 
 • This allows us to now transform all the corners of the cube onto the image plane using the projection matrix
+
+Coworker: Lih-Narn Wang, Yu-Kei Wang
